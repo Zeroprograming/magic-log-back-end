@@ -10,7 +10,10 @@ async function bootstrap() {
 
   // Habilitar CORS
   app.enableCors({
-    origin: 'http://localhost:3000', // Permitir solicitudes desde el cliente
+    origin: [
+      'http://localhost:3000',
+      'https://main.d13udce9rtb692.amplifyapp.com',
+    ],
     methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
     credentials: true, // Permitir cookies si es necesario
   });
